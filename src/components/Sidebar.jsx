@@ -9,9 +9,9 @@ export default function Sidebar() {
                 <Link to="/"><h6>Dashboard</h6></Link>
                 <Link to="/user-list"><h6>Manage User </h6></Link>
                 <Link to="/category-list"><h6>Manage Category</h6></Link>
-                <Link to="/product-list"><h6>Manage Vehicle</h6></Link>
+                <Link to="/vehicle-list"><h6>Manage Vehicle</h6></Link>
                 <Link to="/location-list"><h6>Manage Location</h6></Link>
-                <Link to="/"><h6>Manage Ticket</h6></Link>
+                <Link to="/ticket-list"><h6>Manage Ticket</h6></Link>
                 <Link to="/"><h6>Manage Purchase</h6></Link>
             </div>
         </div>

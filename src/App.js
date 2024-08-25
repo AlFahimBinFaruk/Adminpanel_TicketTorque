@@ -17,6 +17,10 @@ import Login from "./pages/Login";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import UserList from "./pages/user/UserList";
+import TicketList from "./pages/ticket/TicketList";
+import CreateTicket from "./pages/ticket/CreateTicket";
+import UpdateTicket from "./pages/ticket/UpdateTicket";
 
 function App() {
   const { data: details, isLoading, error } = useGetMyProfileQuery();
@@ -38,6 +42,9 @@ function App() {
               </nav>
               <div className="custom-content">
                 <Routes>
+                  {/* user */}
+                  <Route path="/user-list" element={<UserList />} />
+
                   {/* category */}
                   <Route path="/category-list" element={<CategoryList />} />
                   <Route
@@ -61,12 +68,18 @@ function App() {
                   />
 
                   {/* vehicle */}
-                  <Route path="/manage-vehicle" element={<VehicleList />} />
+                  <Route path="/vehicle-list" element={<VehicleList />} />
                   <Route path="/vehicle/add-new" element={<CreateVehicle />} />
                   <Route
-                    path="/vehicle/update/:location_id"
+                    path="/vehicle/update/:vehicle_id"
                     element={<UpdateVehicle />}
                   />
+
+                  {/* ticket */}
+                  <Route path="/ticket-list" element={<TicketList/>}/>
+                  <Route path="/ticket/add-new" element={<CreateTicket/>}/>
+                  <Route path="/ticket/update/:ticket_id" element={<UpdateTicket/>}/>
+
                 </Routes>
               </div>
             </div>

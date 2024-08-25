@@ -24,59 +24,59 @@ export const category_api = createApi({
     tagTypes: ["Category"],
     endpoints: (builder) => ({
 
-        getCategoryList:builder.query({
-            query:()=>({
-                url:"/category/all",
-                method:"GET"
+        getCategoryList: builder.query({
+            query: () => ({
+                url: "/category/all",
+                method: "GET"
             }),
-            providesTags:["Category"]
+            providesTags: ["Category"]
         }),
 
 
-        getCategoryDetails:builder.query({
-            query:(id)=>({
-                url:`/category/details/${id}`,
-                method:"GET"
+        getCategoryDetails: builder.query({
+            query: (id) => ({
+                url: `/category/details/${id}`,
+                method: "GET"
             }),
-            providesTags:["Category"]
+            providesTags: ["Category"]
         }),
 
 
 
-        createNewCategory:builder.mutation({
-            query:(data)=>({
-                url:"/category/add-new",
-                method:"POST",
-                body:data
+        createNewCategory: builder.mutation({
+            query: (data) => ({
+                url: "/category/add-new",
+                method: "POST",
+                body: data
             }),
-            invalidatesTags:["Category"]
+            invalidatesTags: ["Category"]
         }),
 
-        updateCategory:builder.mutation({
-            query:({id,...data})=>({
-                url:`/category/update/${id}`,
-                method:"PUT",
-                body:data
+        updateCategory: builder.mutation({
+            query: ({ id, ...data }) => ({
+                url: `/category/update/${id}`,
+                method: "PUT",
+                body: data
             }),
-            invalidatesTags:["Category"]
+            invalidatesTags: ["Category"]
         }),
 
 
-        deleteCategory:builder.mutation({
-            query:(id)=>({
-                url:`/category/delete/${id}`,
-                method:"DELETE"
+        deleteCategory: builder.mutation({
+            query: (id) => ({
+                url: `/category/delete/${id}`,
+                method: "DELETE"
             }),
-            invalidatesTags:["Category"]
+            invalidatesTags: ["Category"]
         })
 
 
 
-        
 
 
 
-        
+
+
     }),
 });
 
@@ -88,9 +88,9 @@ export const {
     useCreateNewCategoryMutation,
     useUpdateCategoryMutation,
     useDeleteCategoryMutation
-    
-   
 
-    
+
+
+
 
 } = category_api;

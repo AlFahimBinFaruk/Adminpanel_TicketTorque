@@ -64,6 +64,15 @@ export const user_api = createApi({
         }),
 
 
+        getUserList:builder.query({
+            query:()=>({
+                url:"/user/all",
+                method:"GET"
+            }),
+            providesTags:["User"]
+        })
+
+
 
         
     }),
@@ -74,6 +83,7 @@ export const {
     useRegisterUserMutation,
     useLogoutUserQuery,
     useGetMyProfileQuery,
+    useGetUserListQuery
 
     
 

@@ -73,7 +73,7 @@ export default function LocationList() {
                       icon="trash-alt"
                       role="button"
                       color="danger"
-                      onClick={()=>handleDeleteLocation(data.id)}
+                      onClick={() => handleDeleteLocation(data.id)}
                     />
                   </td>
                 </tr>
