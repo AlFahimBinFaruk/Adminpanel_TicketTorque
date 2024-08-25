@@ -1,9 +1,9 @@
 import React from 'react';
 import { MDBBadge, MDBBtn, MDBTable, MDBTableHead, MDBTableBody, MDBIcon } from 'mdb-react-ui-kit';
 
-export default function ManageLocation() {
+export default function VehicleList() {
     return (
-        <div className="manage-location">
+        <div className="manage-vehicle">
             <MDBBtn className="ms-auto mb-5">Add New</MDBBtn>
             <MDBTable align='middle'>
                 <MDBTableHead>
@@ -16,7 +16,7 @@ export default function ManageLocation() {
                 </MDBTableHead>
                 <MDBTableBody>
                     <tr>
-                        <td>Chattogram</td>
+                        <td>Bus</td>
                         
                         <td>
                             <MDBIcon far icon="edit" role="button" className="me-2" color="warning" />
