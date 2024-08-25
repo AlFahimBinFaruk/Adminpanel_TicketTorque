@@ -12,7 +12,7 @@ export default function Sidebar() {
                 <Link to="/vehicle-list"><h6>Manage Vehicle</h6></Link>
                 <Link to="/location-list"><h6>Manage Location</h6></Link>
                 <Link to="/ticket-list"><h6>Manage Ticket</h6></Link>
-                <Link to="/"><h6>Manage Purchase</h6></Link>
+                <Link to="/order-list"><h6>Manage Order</h6></Link>
             </div>
         </div>
     )

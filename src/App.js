@@ -15,12 +15,17 @@ import UpdateVehicle from "./pages/vehicle/UpdateVehicle";
 import { useGetMyProfileQuery } from "./services/user_api";
 import Login from "./pages/Login";
 
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 import UserList from "./pages/user/UserList";
 import TicketList from "./pages/ticket/TicketList";
 import CreateTicket from "./pages/ticket/CreateTicket";
 import UpdateTicket from "./pages/ticket/UpdateTicket";
+
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import OrderList from "./pages/order/OrderList";
+import ManageOrder from "./pages/order/ManageOrder";
 
 function App() {
   const { data: details, isLoading, error } = useGetMyProfileQuery();
@@ -79,6 +84,10 @@ function App() {
                   <Route path="/ticket-list" element={<TicketList/>}/>
                   <Route path="/ticket/add-new" element={<CreateTicket/>}/>
                   <Route path="/ticket/update/:ticket_id" element={<UpdateTicket/>}/>
+
+                  {/* order */}
+                  <Route path="/order-list" element={<OrderList/>}/>
+                  <Route path="/manage-order/:order_id" element={<ManageOrder/>}/>
 
                 </Routes>
               </div>
